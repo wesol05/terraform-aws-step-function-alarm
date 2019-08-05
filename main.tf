@@ -7,8 +7,8 @@ resource "aws_cloudwatch_metric_alarm" "alarm" {
   statistic = "SampleCount"
   comparison_operator = "GreaterThanThreshold"
   threshold = 0
-  evaluation_periods = 1
-  datapoints_to_alarm = 1
+  evaluation_periods = var.evaluation_periods
+  datapoints_to_alarm = var.datapoints_to_alarm
   treat_missing_data = "notBreaching"
   period = var.period
   namespace = "AWS/States"
