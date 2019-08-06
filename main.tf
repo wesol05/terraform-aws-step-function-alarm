@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm" {
   threshold = 0
   evaluation_periods = var.evaluation_periods
   datapoints_to_alarm = var.datapoints_to_alarm
-  treat_missing_data = "missing"
+  treat_missing_data = "notBreaching"
   period = var.period
   namespace = "AWS/States"
   metric_name = "ExecutionsFailed"
